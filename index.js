@@ -56,7 +56,8 @@ async function loop() {
 	} catch (error) {
 		console.error(error);
 	}
+	
+	setTimeout(loop, 45 * 60e3 + (Math.random() * 2 * 60e3));
 }
 
 loop();
-setInterval(loop, 5 * 60e3);
